@@ -21,3 +21,16 @@ Private Sub LoadGrid()
             MessageBox.Show(ex.Message + vbNewLine + ex.ToString)
         End Try
 End Sub
+
+'Cargar un DataGridView con una Lista
+Private Sub LoadGridWithList()
+        Try
+            If ListItems.Count > 0 Or ListItems IsNot Nothing Then 'Verificamos mediante una validacion que la lista con la que llenaremos la Grid no este vacia.
+                TuDataGridView.DataSource = ListItems.ToList() 'Si la lista contiene mas de 0 elementos entonces usamos la propiedad de la Grid DataSource y la cargamos con la lista.
+            Else
+                TuDataGridView.DataSource = Nothing
+            End IF
+        Catch ex As Exception
+            MessageBox.Show(ex.Message + vbNewLine + ex.ToString)
+        End Try
+End Sub
