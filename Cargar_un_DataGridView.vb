@@ -45,7 +45,7 @@ Private Sub LoadGridByExcel()
         ' de Excel y, pasemos la informacion a la DataGridView
         Dim Table As Datatable = New Datatable()
         Dim OpenFileDlg As New Windows.Forms.OpenFileDialog ' Generamos la Clase OpenFileDialog
-        Dim result As DialogResult = OpenFileDlg.ShowDialog() ' El aarchivo seleccionado, lo grabaremos en una variable de la Clase Dialog Result
+        Dim result As DialogResult = OpenFileDlg.ShowDialog() ' El archivo seleccionado, lo grabaremos en una variable de la Clase Dialog Result
         Dim path As String = OpenFileDlg.FileName 'Este guardamos el Path
         Dim archivo As String = path.ToString
         OpenFileDlg = Nothing 'Matamos el Open Dialog
